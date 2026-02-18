@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Tilman Clínica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="fw-bold text-dark">Tilman</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary btn-sm px-4" onclick="openModal('whatsapp')">Agendar</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Standardized Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="fw-bold display-4">Especialidades</h1>
+            <p class="lead opacity-90">Tecnologia e cuidado humano integrados.</p>
+        </div>
+    </header>
+
+    <section class="py-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="dashboard-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="" data-img="pediatria" alt="Pediatria">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="fw-bold text-primary">Pediatria</h4>
+                            <p class="text-muted">Acompanhamento completo desde o nascimento.</p>
+                            <button class="btn btn-outline-primary w-100" onclick="openServiceDetail('pediatria')">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="" data-img="ginecologia" alt="Ginecologia">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="fw-bold text-primary">Ginecologia</h4>
+                            <p class="text-muted">Saúde da mulher e pré-natal avançado.</p>
+                            <button class="btn btn-outline-primary w-100" onclick="openServiceDetail('ginecologia')">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="" data-img="cardiologia" alt="Cardiologia">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="fw-bold text-primary">Cardiologia</h4>
+                            <p class="text-muted">Exames cardiológicos de alta precisão.</p>
+                            <button class="btn btn-outline-primary w-100" onclick="openServiceDetail('cardiologia')">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Dashboard Modal -->
+    <div class="modal-overlay" id="dashboardModal">
+        <div class="dashboard-modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-sidebar">
+                <h5 class="fw-bold text-dark mb-1">Agendamento</h5>
+                <p class="text-muted small mb-4">Selecione o canal</p>
+                <div class="modal-nav">
+                    <button class="nav-btn active" data-target="whatsapp" onclick="switchTab('whatsapp')"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                    <button class="nav-btn" data-target="email" onclick="switchTab('email')"><i class="far fa-envelope"></i> Email</button>
+                </div>
+                <div class="mt-auto p-3 bg-white rounded border border-light text-center">
+                    <small class="text-muted d-block mb-1">Dúvidas?</small>
+                    <strong class="text-primary" data-key="phone">+258 84 446 5042</strong>
+                </div>
+            </div>
+            <div class="modal-content-area">
+                <div class="view-container">
+                    <div class="modal-view active" id="view-whatsapp">
+                        <h3 class="fw-bold mb-3">Agendar via WhatsApp</h3>
+                        <p class="text-muted mb-4">A forma mais rápida.</p>
+                        <form id="whatsappForm">
+                            <div class="mb-3"><label class="form-label">Nome Completo</label><div class="input-wrapper"><input type="text" class="form-control" name="name" required><span class="clear-input d-none"><i class="fas fa-times"></i></span></div></div>
+                            <div class="row"><div class="col-md-6 mb-3"><label class="form-label">Especialidade</label><select class="form-select" name="specialty"><option>Clínica Geral</option><option>Pediatria</option><option>Ginecologia</option><option>Cardiologia</option></select></div><div class="col-md-6 mb-3"><label class="form-label">Data</label><div class="input-wrapper"><input type="date" class="form-control" name="date"></div></div></div>
+                            <button type="submit" class="btn btn-success w-100 btn-lg mt-2"><i class="fab fa-whatsapp me-2"></i> Iniciar Conversa</button>
+                        </form>
+                    </div>
+                    <div class="modal-view" id="view-email">
+                        <h3 class="fw-bold mb-3">Enviar Email</h3>
+                        <form id="emailForm">
+                            <div class="mb-3"><label class="form-label">Nome</label><div class="input-wrapper"><input type="text" class="form-control" name="name" required><span class="clear-input d-none"><i class="fas fa-times"></i></span></div></div>
+                            <div class="mb-3"><label class="form-label">Email</label><div class="input-wrapper"><input type="email" class="form-control" name="email" required><span class="clear-input d-none"><i class="fas fa-times"></i></span></div></div>
+                            <div class="mb-3"><label class="form-label">Mensagem</label><div class="input-wrapper"><textarea class="form-control" name="message" rows="4" required></textarea><span class="clear-input d-none"><i class="fas fa-times"></i></span></div></div>
+                            <button type="submit" class="btn btn-primary w-100 btn-lg mt-2">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="modal-view" id="view-service-detail">
+                        <div id="service-content-injection"></div>
+                        <div class="d-grid gap-2"><button class="btn btn-primary btn-lg" onclick="switchTab('whatsapp')">Agendar</button><button class="btn btn-outline-secondary" onclick="switchTab('whatsapp')">Voltar</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../config/settings.js"></script>
+    <script src="../src/scripts/script.js"></script>
+</body>
+</html>

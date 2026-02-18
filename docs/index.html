@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilman Clínica - Excelência em Saúde</title>
+    <meta name="description" content="Cuidados médicos personalizados em Maputo.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../src/styles/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div>
+                    <span class="fw-bold text-dark lh-1 d-block">Tilman</span>
+                    <small class="text-muted" style="font-size: 0.75rem; font-weight: 500;">Clínica Médica</small>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-primary btn-sm px-4 py-2" onclick="openModal('whatsapp')">
+                            Marcar Consulta
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container hero-content text-white position-relative z-2">
+            <div class="row">
+                <div class="col-lg-7 animate-fade-in">
+                    <span class="badge bg-white text-primary px-3 py-2 rounded-pill mb-3 fw-bold ls-1 shadow-sm">PADRÃO OURO EM SAÚDE</span>
+                    <h1 class="fw-bold mb-4">Tilman Clínica: Onde sua vida é prioridade.</h1>
+                    <p class="lead mb-5 text-light opacity-75" style="max-width: 500px;">
+                        Não deixe sua saúde para depois. Atendimento rápido, tecnologia avançada e os melhores especialistas de Maputo prontos para cuidar de você hoje.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-primary btn-lg" onclick="openModal('whatsapp')">
+                            Agendar Agora <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <a href="sobre.html" class="btn btn-outline-light btn-lg border-2">Conheça a Tilman</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="container" style="margin-top: -80px; position: relative; z-index: 10;">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded-4 shadow-lg text-center h-100 d-flex flex-column align-items-center justify-content-center border border-light">
+                    <h2 class="display-5 fw-bold text-primary counter mb-0" data-target="5000">0</h2>
+                    <p class="text-muted fw-bold small text-uppercase ls-1">Vidas Transformadas</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded-4 shadow-lg text-center h-100 d-flex flex-column align-items-center justify-content-center border border-light">
+                    <h2 class="display-5 fw-bold text-secondary counter mb-0" data-target="15">0</h2>
+                    <p class="text-muted fw-bold small text-uppercase ls-1">Especialistas de Elite</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded-4 shadow-lg text-center h-100 d-flex flex-column align-items-center justify-content-center border border-light">
+                    <h2 class="display-5 fw-bold text-dark counter mb-0" data-target="98">0</h2>
+                    <p class="text-muted fw-bold small text-uppercase ls-1">% Satisfação</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-section">
+        <div class="container">
+            <div class="section-title-wrapper d-flex justify-content-between align-items-end">
+                <div>
+                    <h6 class="text-primary fw-bold text-uppercase mb-2">Especialidades</h6>
+                    <h2 class="fw-bold mb-0">Nossos Serviços</h2>
+                </div>
+                <a href="servicos.html" class="btn btn-outline-primary d-none d-md-block">Ver Todos</a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Pediatria -->
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="card-img-wrapper">
+                            <img src="" data-img="pediatria" alt="Pediatria">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-2">Pediatria</h4>
+                            <p class="text-muted mb-4 small">Cuidado integral para o desenvolvimento infantil, desde neonatos a adolescentes.</p>
+                            <button class="btn btn-link text-primary p-0 fw-bold text-decoration-none" onclick="openServiceDetail('pediatria')">
+                                Saiba Mais <i class="fas fa-chevron-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ginecologia -->
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="card-img-wrapper">
+                            <img src="" data-img="ginecologia" alt="Ginecologia">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-2">Ginecologia</h4>
+                            <p class="text-muted mb-4 small">Saúde da mulher com tecnologia avançada para diagnóstico e prevenção.</p>
+                            <button class="btn btn-link text-primary p-0 fw-bold text-decoration-none" onclick="openServiceDetail('ginecologia')">
+                                Saiba Mais <i class="fas fa-chevron-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cardiologia -->
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="card-img-wrapper">
+                            <img src="" data-img="cardiologia" alt="Cardiologia">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-2">Cardiologia</h4>
+                            <p class="text-muted mb-4 small">Monitoramento cardíaco completo e tratamentos preventivos de alta precisão.</p>
+                            <button class="btn btn-link text-primary p-0 fw-bold text-decoration-none" onclick="openServiceDetail('cardiologia')">
+                                Saiba Mais <i class="fas fa-chevron-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Dashboard Modal -->
+    <div class="modal-overlay" id="dashboardModal">
+        <div class="dashboard-modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+            
+            <!-- Sidebar Navigation -->
+            <div class="modal-sidebar">
+                <h5 class="fw-bold text-dark mb-1">Agendamento</h5>
+                <p class="text-muted small mb-4">Selecione o canal</p>
+                
+                <div class="modal-nav">
+                    <button class="nav-btn active" data-target="whatsapp" onclick="switchTab('whatsapp')">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                    <button class="nav-btn" data-target="email" onclick="switchTab('email')">
+                        <i class="far fa-envelope"></i> Email
+                    </button>
+                </div>
+                
+                <div class="mt-auto p-3 bg-white rounded border border-light text-center">
+                    <small class="text-muted d-block mb-1">Dúvidas?</small>
+                    <strong class="text-primary" data-key="phone">...</strong>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="modal-content-area">
+                <div class="view-container">
+                    
+                    <!-- WhatsApp View -->
+                    <div class="modal-view active" id="view-whatsapp">
+                        <h3 class="fw-bold mb-3">Agendar via WhatsApp</h3>
+                        <p class="text-muted mb-4">A forma mais rápida. Preencha e iniciaremos a conversa já com seus dados.</p>
+                        
+                        <form id="whatsappForm">
+                            <div class="mb-3">
+                                <label class="form-label">Nome Completo</label>
+                                <div class="input-wrapper">
+                                    <input type="text" class="form-control" name="name" placeholder="Seu nome" required>
+                                    <span class="clear-input d-none"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Especialidade</label>
+                                    <select class="form-select" name="specialty">
+                                        <option value="Clínica Geral">Clínica Geral</option>
+                                        <option value="Pediatria">Pediatria</option>
+                                        <option value="Ginecologia">Ginecologia</option>
+                                        <option value="Cardiologia">Cardiologia</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Data Preferida</label>
+                                    <div class="input-wrapper">
+                                        <input type="date" class="form-control" name="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100 btn-lg mt-2">
+                                <i class="fab fa-whatsapp me-2"></i> Iniciar Conversa
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Email View -->
+                    <div class="modal-view" id="view-email">
+                        <h3 class="fw-bold mb-3">Enviar Email</h3>
+                        <p class="text-muted mb-4">Responderemos em até 24 horas.</p>
+                        <form id="emailForm">
+                            <div class="mb-3">
+                                <label class="form-label">Nome</label>
+                                <div class="input-wrapper">
+                                    <input type="text" class="form-control" name="name" required>
+                                    <span class="clear-input d-none"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Seu Email</label>
+                                <div class="input-wrapper">
+                                    <input type="email" class="form-control" name="email" placeholder="exemplo@email.com" required>
+                                    <span class="clear-input d-none"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mensagem</label>
+                                <div class="input-wrapper">
+                                    <textarea class="form-control" name="message" rows="4" placeholder="Descreva sua necessidade..." required></textarea>
+                                    <span class="clear-input d-none"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 btn-lg mt-2">
+                                <i class="far fa-paper-plane me-2"></i> Enviar
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Service Detail View (Dynamic) -->
+                    <div class="modal-view" id="view-service-detail">
+                        <div id="service-content-injection">
+                            <!-- Content injected via JS -->
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-lg" onclick="switchTab('whatsapp')">
+                                Agendar para esta Especialidade
+                            </button>
+                            <button class="btn btn-outline-secondary" onclick="switchTab('whatsapp')">
+                                Voltar
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAB -->
+    <div class="fab-container">
+        <a href="#" data-link="whatsapp" target="_blank" class="fab-btn whatsapp-fab" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="fab-btn appointment-fab" onclick="openModal('whatsapp')" title="Agendar">
+            <i class="fas fa-calendar-check"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container text-center">
+            <p class="opacity-50">&copy; 2025 Tilman Clínica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 1. Import Settings First -->
+    <script src="../config/settings.js"></script>
+    <!-- 2. Import Main Script -->
+    <script src="../src/scripts/script.js"></script>
+</body>
+</html>
